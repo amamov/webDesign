@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex 02</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        height: 300px;
+        display: flex;
+        /* justify-content: start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+
+        /* space-evenly : ms 브라우저에서 지원 X */
+        /* justify-content: space-evenly; */
+
+        /* align-items: stretch; : 디폴트 값; items의 height를 container에 맞게 늘린다. */
+        /* align-items: stretch; */
+        /* align-items: center; */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+
+        flex-wrap: wrap;
+        /* wrap인 상태에서, 아이템들의 행이 2줄 이상 되었을 때 수직축 방향 정렬을 결정한다. */
+        /* align-content: stretch;
+        align-content: center;
+        align-content: flex-start;
+        align-content: flex-end; */
+        align-content: space-around;
+        /* align-content: space-between; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">
+        flex-item-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      </div>
+      <div class="flex-item">flex-item-B</div>
+      <div class="flex-item">flex-item-C</div>
+    </div>
+  </body>
+</html>
