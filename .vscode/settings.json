@@ -1,0 +1,6 @@
+{
+    "python.formatting.provider": "black",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "300"
+}
