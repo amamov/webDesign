@@ -1,0 +1,21 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1rem;
+}
+.grid_item:nth-child(1) {
+  /* grid-column: 1/3; 그리드 라인 column 1번 부터 3번까지 */
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+.grid_item:nth-child(10) {
+  /* grid-column: 1/3; 그리드 라인 column 1번 부터 3번까지 */
+  grid-column: 2/4;
+  /* grid-column: 2 span 2; : 2번째 라인부터 2라인 더한 라인까지 */
+  grid-row: 5/6;
+}
+.grid_item:nth-child(9) {
+  /* 시작점이 auto 즉, 어디에서 시작되든, 2칸 더 점유하도록 */
+  grid-column: auto/span 2;
+}

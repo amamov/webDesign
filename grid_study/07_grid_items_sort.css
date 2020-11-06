@@ -1,0 +1,52 @@
+/* align : 세로 방향 정렬 */
+/* justify : 가로 방향 정렬 */
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: minmax(100px, auto);
+  height: 100vh;
+
+  /* align-items: stretch; 디폴트 */
+  /* align-items: start; */
+  /* align-items: center; */
+  /* align-items: end; */
+
+  /* justify-items: stretch; 디폴트 */
+  /* justify-items: start; */
+  /* justify-items: center; */
+  /* justify-items: end; */
+
+  /* place-items: align-items justify-items; */
+  place-items: center center;
+
+  /* align-content: stretch; 디폴트 */
+  /* align-content: start; */
+  /* align-content: center; */
+  /* align-content: end; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+
+  /* justify-content: stretch; 디폴트 */
+  /* justify-content: start; */
+  /* justify-content: center; */
+  /* justify-content: end; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+
+  /* place-content: align-content justify-content; */
+  place-content: center center;
+}
+.grid_item:nth-child(8) {
+  /* align-self: stretch; 디폴트 */
+  /* align-self: start; */
+  /* align-self: center; */
+  /* align-self: end; */
+
+  /* justify-self: stretch; 디폴트 */
+  /* justify-self: start; */
+  /* justify-self: center; */
+  /* justify-self: end; */
+
+  /* place-self: align-self justify-self; */
+  place-self: start end;
+}

@@ -1,0 +1,34 @@
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .title {
+  font-family: "Quicksand", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+header .search_form {
+  display: flex;
+  width: 270px;
+}
+
+.search_form input:nth-child(1) {
+  width: 90%;
+  border-width: 0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search_form input:nth-child(2) {
+  width: 20%;
+  flex: 0 0 auto;
+  border-width: 0;
+  background: rgb(255, 215, 0);
+  border-radius: 5px;
+
+  font-size: 15px;
+}

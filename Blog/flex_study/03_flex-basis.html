@@ -1,0 +1,32 @@
+<!-- 
+  [flex 아이템에 적용되는 속성]
+  <default> flex-basis: auto; 
+  flex basis는 Flex 아이템의 기본 크기를 설정한다. 
+  flex-direction이 row일 때는 width, column일 때는 height이다.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex 03 flex-basis</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        height: 300px;
+        display: flex;
+      }
+      .flex-item {
+        flex-basis: 150px;
+        /* flex-basis: 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">flex-item-A</div>
+      <div class="flex-item">flex-item-Bflex-item-Bflex-item-B</div>
+      <div class="flex-item">flex-item-Cflex-item-Cflex-item-C</div>
+    </div>
+  </body>
+</html>

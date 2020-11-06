@@ -1,0 +1,25 @@
+.grid_container {
+  display: grid;
+
+  /* minmax(최소값 ,최댓값) */
+  /* 최솟값과 최댓값을 지정할 수 있는 함수입니다. */
+  /* minmax(100px, auto) : 최소 100px 값으로 하고 요소가 많아서 100px이 넘어가면 알아서 늘어나도록  */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: repeat(4, minmax(100px, auto)); */
+
+  /* auto-fill & auto-fit */
+  /* column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 맞춰준다. */
+  /* 즉, 알아서 item들이 container에 차도록 채우는 것 */
+  /* grid-template-columns: repeat(auto-fill, minmax(20%, auto)); */
+  /* 반응형 디자인이 가능하다. */
+
+  /* auto-fill : item들이 각자의 크기가 있어서 컨테이너에 꽉 채우도록 하지 않는다. */
+  /* auto-fit : auto-fill 상태에서 item들이 각자의 크기가 작아서 꽉채우지 못할 경우 item을 컨테이너에 꽉차도록 늘린다.
+   (둘의 차이는 이것뿐이다.)  */
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  gap: 25px;
+}
+.grid_item {
+  /*  */
+}

@@ -1,0 +1,19 @@
+.grid_container {
+  display: grid;
+  height: 80vh;
+  width: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+  grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+
+  /* row의 간격을 50px로 지정한다.  */
+  row-gap: 50px;
+
+  /* column의 간격을 10px로 지정한다.  */
+  column-gap: 10px;
+
+  /* grid-gap: 10px; --> 구버전 브라우저 호환 */
+  gap: 50px 10px;
+}
+.grid_item {
+  /*  */
+}

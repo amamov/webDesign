@@ -1,0 +1,40 @@
+<!-- 
+  [flex 아이템에 적용되는 속성]
+  <default> flex-grow: 0; 
+  flex-basis: 100px; flex-grow: 0; -> 컨테이너가 아무리 늘어나도 100px보다 커지지 않는다.
+  flex-grow는 아이템들의 "flex-basis를 제외한 여백 부분"을 비율을 설정하여 나누어 가득채운다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex 04 flex-grow</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        height: 300px;
+        display: flex;
+      }
+      .flex-item:nth-child(1) {
+        flex-grow: 1;
+        /* flex-basis를 제외한 여백의 비율을 1/11로 가진다. */
+      }
+      .flex-item:nth-child(2) {
+        flex-grow: 2;
+        /* flex-basis를 제외한 여백의 비율을 2/11로 가진다. */
+      }
+      .flex-item:nth-child(3) {
+        flex-grow: 8;
+        /* flex-basis를 제외한 여백의 비율을 8/11로 가진다. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">flex-item-Aflex-item-Aflex-item-Aflex-item-A</div>
+      <div class="flex-item">flex-item-B</div>
+      <div class="flex-item">flex-item-C</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+/* 이미지의 실제 사이즈는 width : 5100px, height : 300px 이다. */
+/* 픽셀 집적도가 높은 고해상도 이미지 표현을 위해 가로 세로 150px로 표현될 이미지라면 실제 이미지를 300px로 만든 다음에 css로 절반을 줄여준다. */
+@keyframes ani {
+  0% {
+  }
+  100% {
+    background-position: -2550px 0;
+  }
+}
+.spaceship {
+  /* 이미지를 150px로 표현하고 싶다. -> 실제 크기인 300px을 css로 150px로 잡아서 표현해준다. */
+  width: 150px;
+  height: 150px;
+  /* 
+  background: url() no-repeat 0 0 / auto 150px;
+    url의 사진을 사용하고 반복없이 0, 0 위치에서 세로는 150px로 하고 가로는 세로의 크기에 맞게 알아서 조정 되도록한다.
+  */
+  background: url("./images/frameByFrame_sprite.png") no-repeat 0 0 / auto 150px;
+  animation: ani 1s infinite steps(17);
+}

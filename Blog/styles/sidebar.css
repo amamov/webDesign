@@ -1,0 +1,25 @@
+.secondary {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.secondary {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.secondary_a {
+  background: white;
+}
+.secondary_b {
+  color: white;
+  background: #666;
+}
+
+.info_list_item {
+  display: flex;
+  margin: 1rem 0;
+  line-height: 20px;
+}
+.info_list_item:before {
+  content: "⌘";
+  margin-right: 0.5em;
+}

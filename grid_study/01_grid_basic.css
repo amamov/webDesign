@@ -1,0 +1,24 @@
+.grid_container {
+  display: grid;
+  /* grid-template-columns: 100px 300px 500px; */
+
+  /* fr : fraction(비율)  1fr 1fr 2fr --> 1 : 1 : 2 */
+  /* grid-template-columns: 1fr 1fr 2fr; */
+
+  /* grid-template-columns: 1fr 500px 2fr; */
+
+  /* 1fr 1fr 1fr */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* 컨테이너의 높이를 알아서 꽉 채운다. */
+  height: 80vh;
+
+  /* 1fr 2fr 3fr 1fr 2fr 3fr 1fr 2fr 3fr  */
+  /* grid-template-columns: repeat(3, 1fr 2fr 3fr); */
+
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* grid-template-rows: 200px 200px 300px; */
+}
+.grid_item {
+  /*  */
+}

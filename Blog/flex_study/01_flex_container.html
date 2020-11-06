@@ -1,0 +1,66 @@
+<!-- 
+  [Keyword]
+  display: flex;
+  flex-direction
+  flex-wrap
+  flex-flow
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex 01</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        /* 내용물의 크기만큼 width를 가진다. */
+        /* item들의 column이 일치하게 변한다. */
+        /* display: flex; */
+
+        /* container가 inline으로 하고 flex를 적용 */
+        /* display: inline-flex; */
+
+        /* flex-direction : item 꼬챙이의 방향을 결정 */
+        /* flex의 main축의 디폴트 방향은 row다.(item 꼬챙이) */
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* flex-wrap : 내용이 꽉차면 밑으로 내린다. */
+        /* flex-wrap: nowrap; : 디폴트 */
+        /* flex-wrap: wrap; */
+        /* flex-wrap: nowrap; */
+
+        /* flex-flow : flex-direction flex-wrap 단축 속성 */
+        /* flex-flow: row wrap; */
+        /* flex-flow: row nowrap; */
+      }
+
+      /* 반응형 디자인 */
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+      }
+      @media (min-width: 600px) {
+        /* 600px 넘어가면 ... */
+        .flex-container {
+          flex-direction: row;
+        }
+        .flex-item {
+          flex: 1;
+        }
+      } ;
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">
+        flex-item-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      </div>
+      <div class="flex-item">flex-item-B</div>
+      <div class="flex-item">flex-item-C</div>
+    </div>
+  </body>
+</html>

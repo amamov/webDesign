@@ -1,0 +1,37 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1rem;
+  grid-template-areas:
+    "header1 header2 header3"
+    "sidebar-a main sidebar-b"
+    "div div div"
+    "footer footer footer";
+}
+.header1 {
+  /* grid-area: header1; 여기서 header은 grid-template-areas에 사용할 이름이다. */
+  grid-area: header1;
+}
+.header2 {
+  grid-area: header2;
+}
+.header3 {
+  grid-area: header3;
+}
+.sidebar-a {
+  grid-area: sidebar-a;
+}
+.sidebar-b {
+  grid-area: sidebar-b;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+div {
+  grid-area: div;
+}

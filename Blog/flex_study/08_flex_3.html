@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Flex 08 flex 3</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        min-height: 100vh;
+        /* min-height의 디폴트는 0이고 min-height: 100vh; -> 최소 높이가 100vh이하로 축소되지 않는다.  */
+        /* 1vh : 브라우저 높이 값이 900px일때 1vh는 9px이다. */
+        /* min-height: 100vh; -> 박스의 최소 높이가 브라우저의 높이값 이하로 축소되지 않는다. 즉, 컨테츠의 높이: 브라우저의 높이*/
+      }
+
+      .flex-item {
+        /* box-sizing: border-box; 로 해서 컬럼들을 원하는대로 나눌 수 있다. */
+        flex: 1 1 auto;
+        /* flex: 1 auto; 로 축약할 수 있다.  */
+        /* margin: 10px; 마진을 부여하면 원하는대로 못나눈다.  */
+        /* flex-item안에 박스를 만들어 padding을 부여하여 각 flex-item와 떨어진 것처럼 보이게 한다. */
+      }
+
+      @media (min-width: 600px) {
+        .flex-container {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .flex-item {
+          width: 50%;
+          /* flex-basis: auto; 일때는 width값이 들어간다.  */
+          flex: 0 1 auto;
+        }
+      }
+      @media (min-width: 900px) {
+        .flex-item {
+          flex: 1 1 auto;
+          /* 요소들을 3x3으로 나열하고 싶다. 
+          -> width:33.3333px로 하지않아도 된다. 그 이유는 flex-grow가 1이기 때문에 
+            width가 컨텐츠에 차도록 알아서 채워진다.*/
+          width: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCCC</div>
+      <div class="flex-item">AAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCCC</div>
+      <div class="flex-item">AAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCCC</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Flex 08 flex 3</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+      }
+
+      .flex-item {
+        width: 100px;
+      }
+
+      .flex-item:last-child {
+        margin-left: auto;
+        /* margin-left: auto; 남아있는 margin을 전부 써서 맨 왼쪽으로 이동한다. */
+        /* C box만 맨 오른쪽으로 보내고 싶을 떄 사용하는 기법 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">A</div>
+      <div class="flex-item">B</div>
+      <div class="flex-item">C</div>
+    </div>
+  </body>
+</html>

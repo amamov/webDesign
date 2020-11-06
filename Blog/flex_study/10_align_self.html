@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Flex 08 flex 3</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .flex-item:nth-child(2) {
+        align-self: flex-start;
+        /* 개별 아이템 정렬이 가능하다. align-items보다 우선된다. */
+      }
+      .flex-item:nth-child(4) {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">A</div>
+      <div class="flex-item">B</div>
+      <div class="flex-item">C</div>
+      <div class="flex-item">D</div>
+      <div class="flex-item">E</div>
+    </div>
+  </body>
+</html>

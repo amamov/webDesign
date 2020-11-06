@@ -1,0 +1,97 @@
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: rgb(238, 238, 238);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid를 이용한 반응형 웹디자인 */
+
+/* @media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+  }
+
+  .header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .menu {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  .card_list_container {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .sidebar_a {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .sidebar_b {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  footer {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    grid-template-columns: 300px auto 300px;
+  }
+} */
+
+/* Grid-template을 이용한 반응형 웹 디자인 */
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas:
+      "  header header header"
+      "  menu    menu   menu"
+      "sidebar_a main sidebar_b"
+      " footer  footer footer";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .card_list_container {
+    grid-area: main;
+  }
+
+  .sidebar_a {
+    grid-area: sidebar_a;
+  }
+
+  .sidebar_b {
+    grid-area: sidebar_b;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    grid-template-columns: 300px auto 300px;
+  }
+}

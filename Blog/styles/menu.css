@@ -1,0 +1,33 @@
+.menu {
+  background: rgb(255, 215, 0);
+  display: flex;
+  height: 4rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu_item {
+  flex: 1 1 auto;
+  transition: 0.8s;
+}
+
+.menu_item:hover {
+  flex: 2 1 auto;
+  background-color: rgb(220, 20, 60);
+}
+
+.menu_item .menu_link {
+  /* a 태그는 block으로 하고 패딩으로 꽉채우자 */
+  display: block;
+  padding: 1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  text-align: center;
+}
+
+.menu_link:hover {
+  color: white;
+}
