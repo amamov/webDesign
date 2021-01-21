@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Modal</title>
+    <style>
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .dialog {
+        width: 50vw;
+        padding: 2em;
+        border-radius: 1rem;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="dialog">
+        Websites generally need to serve additional files such as images,
+        JavaScript, or CSS. In Django, we refer to these files as “static
+        files”. Django provides django.contrib.staticfiles to help you manage
+        them. This page describes how you can serve these static files.
+      </div>
+    </div>
+  </body>
+</html>

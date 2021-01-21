@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      /*
+        flex-shrink: 1; (default) -> flex-item의 contents가 없다면 
+        찌그러진다.(수축) 이를 수축되지 않도록 하고 싶다면 flex-shrink: 0;을 해준다.
+      */
+      html {
+        background: gray;
+      }
+      .menu {
+        display: flex;
+      }
+      .menu_item {
+        flex: 1; /* 꽉 차게 또는 비율로 쓸 때 */
+        background: black;
+        transition: 0.5s;
+      }
+      .menu_item:hover {
+        flex: 1.5; /* 비율로 쓴다. */
+        background: white;
+      }
+      .menu_link {
+        display: block;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #555;
+        text-decoration: none;
+        text-align: center;
+      }
+    </style>
+    <title>Menu</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="menu_item">
+          <a href="#" class="menu_link">Home</a>
+        </li>
+        <li class="menu_item">
+          <a href="#" class="menu_link">About</a>
+        </li>
+        <li class="menu_item">
+          <a href="#" class="menu_link">Product</a>
+        </li>
+        <li class="menu_item">
+          <a href="#" class="menu_link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

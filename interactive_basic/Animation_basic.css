@@ -110,3 +110,8 @@
   /* forwards : 마지막을 100%로 그대로 두도록 */
   animation: ani 1s ease-in-out forwards;
 }
+
+circle {
+  background: #ffffff;
+  transform: rotate(180deg);
+}

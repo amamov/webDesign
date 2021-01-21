@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <style>
+      html {
+        background: gray;
+      }
+      .search_form {
+        display: flex;
+        height: 40px;
+      }
+      .search_form input {
+        flex: 1; /* 꽉 차게 하고 싶다. */
+        margin-right: 10px;
+        border: 0;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+      }
+      .search_form button {
+        width: 4rem;
+        border: 0;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="search_form">
+      <input type="search" />
+      <button type="submit">찾기</button>
+    </form>
+  </body>
+</html>
