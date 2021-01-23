@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background: gray;
+        display: grid;
+        grid-template-columns: 20% minmax(200px, auto) 200px;
+      }
+      .item {
+        border: 1px solid black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">
+        fr은 fraction(뜻은 여기로[새 창])인데요, 숫자 비율대로 트랙의 크기를
+        나눕니다. 즉 위의 1fr 1fr 1fr은 균일하게 1:1:1 비율인 3개의 column을
+        만들겠다는 의미에요. 이렇게요↓
+      </div>
+      <div class="item">fr은 fraction(뜻은 여기로[새 창])인데요,</div>
+      <div class="item">fr은 fraction(뜻은 여기로[새 창])인데요,</div>
+      <div class="item">
+        fr은 fraction(뜻은 여기로[새 창])인데요, 숫자 비율대로 트랙의 크기를
+        나눕니다. 즉 위의 1fr 1fr 1fr은 균일하게 1:1:1 비율인 3개의 column을
+        만들겠다는 의미에요. 이렇게요↓ fr은 fraction(뜻은 여기로[새 창])인데요,
+        숫자 비율대로 트랙의 크기를 나눕니다. 즉 위의 1fr 1fr 1fr은 균일하게
+        1:1:1 비율인 3개의 column을 만들겠다는 의미에요. 이렇게요↓
+      </div>
+      <div class="item">fr은 fraction(뜻은 여기로[새 창])인데요,</div>
+      <div class="item">fr은 fraction(뜻은 여기로[새 창])인데요,</div>
+    </div>
+  </body>
+</html>
