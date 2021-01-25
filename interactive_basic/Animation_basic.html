@@ -4,55 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="default.css" />
-    <link rel="stylesheet" href="Animation_basic.css" />
-    <title>Animation basic</title>
+    <link rel="stylesheet" href="animation.css" />
+    <title>Animation</title>
   </head>
   <body>
-    <h1>CSS Animation basic</h1>
-    <div class="box_container">
+    <h1>CSS Animation</h1>
+    <div class="container">
       <div class="box">1</div>
       <div class="box">2</div>
       <div class="box">3</div>
       <div class="box">4</div>
       <div class="box">5</div>
-      <div class="box_animation">animation object</div>
     </div>
-    <canvas id="myCanvas" width="200" height="200"></canvas>
-    <button type="button" onclick="animateCircle();">Draw</button>
-    <script>
-      animateCircle = function () {
-        <!-- // const ctx = document.querySelector("#myCanvas").getContext("2d"); -->
-        const end = Math.PI * 1.5;
-        for (let i = 0; i < 100; i++) {
-          draw(i);
-        }
-        function draw() {
-          var canvas = document.getElementById("canvas");
-          if (canvas.getContext) {
-            var ctx = canvas.getContext("2d");
-
-            ctx.beginPath();
-            ctx.moveTo(75, 50);
-            ctx.lineTo(100, 75);
-            ctx.lineTo(100, 25);
-            ctx.fill();
-          }
-        }
-
-        function draw(delay) {
-          setTimeout(() => {
-            ctx.beginPath();
-            ctx.moveTo(75, 50);
-            ctx.lineTo(100, 75);
-            ctx.lineTo(100, 25);
-            ctx.fill();
-            ctx.clearRect(0, 0, 200, 200);
-            ctx.beginPath();
-            ctx.arc(100, 100, 50, 0, (end / 100) * delay);
-            ctx.stroke();
-          }, delay * 10);
-        }
-      };
-    </script>
+    <div class="box_animation">animation object</div>
   </body>
 </html>

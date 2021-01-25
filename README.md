@@ -2,6 +2,9 @@
 
 순수 CSS 디자인에 대한 공부
 
+- [Grid](#grid)
+- [Animation](#animation)
+
 ## Grid
 
 - `grid-template-columns: 20% auto 20%;`
@@ -136,3 +139,29 @@ div {
   grid-area: footer;
 }
 ```
+
+<br>
+
+---
+
+<br>
+
+## Animation
+
+### transition
+
+[doc](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+
+CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
+
+### transform
+
+[doc](https://developer.mozilla.org/ko/docs/Web/CSS/transform)
+
+요소에 회전, 크기 조절, 기울이기, 이동 효과를 부여할 수 있다.
+
+### animation
+
+[doc](https://developer.mozilla.org/ko/docs/Web/CSS/animation)
+
+스타일을 전환하는 애니메이션을 적용한다.

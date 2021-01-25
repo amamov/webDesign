@@ -1,0 +1,111 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.box {
+    /* [Default] */
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 0, 0.7);
+    border: 2px solid black;
+
+    /* [transition] : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다. */
+
+    /* transition: 1s linear; */
+    /* 
+      transition: 1s linear;
+      - transition-property: all; 
+      - transition-duration: 1s;
+      - transition-timing-function: linear; 등속도 운동 
+      - transition-delay: 0s; 
+    */
+
+    /* font-size의 변화에 대해 1초동안 ease-in-out방식으로 변화하도록 한다. */
+    /* transition: font-size 1s ease-in-out, */
+
+    transition: font-size 1s ease-in-out, transform 0.5s ease-in-out;
+}
+.box:hover {
+    font-size: 1.8rem;
+    /* width: 100px;
+    height: 200px; */
+
+    /* [transform] : 요소에 회전, 크기 조절, 기울이기, 이동 효과를 부여할 수 있다. */
+
+    /* 현재 크기에서 요소의 크기를 2배 확대한다. */
+    transform: scale(2);
+
+    /* 현재 크기에서 요소의 크기를 2배 확대한다. and 현재 상태에서 요소를 30도 회전한다. */
+    /* transform: scale(2) rotate(30deg); */
+
+    /* 현재 상태에서 요소를 x축 방향으로 30도 비튼다. */
+    /* transform: skew(30deg); */
+
+    /* 현재 상태에서 요소를 y축 방향으로 30도 비튼다. */
+    /* transform: skewY(30deg); */
+
+    /* 현재 위치에서 요소를 x축으로 30px, y축으로 20px 이동한다. */
+    /* transform: translate(30px, 20px); */
+
+    /* [기준점 바꾸기] */
+    /* transform-origin: 50% 50%; --> 디폴트 기준 즉, 가운데(정중앙) */
+
+    /* 기준점을 요소의 왼쪽 상단으로 바꾼다. */
+    /* transform-origin: left top; */
+
+    /* 기준점을 숫자 값으로 변경한다. 가로 방향과 세로 방향을 지정해준다.  */
+    /* transform-origin: 10% 30%; */
+
+    /* 아래의 식은 기준점을 원래 요소의 가장 왼쪽, 가장 위쪽으로 잡은 left top과 같다. */
+    /* transform-origin: 0% 0%; */
+}
+
+/* [animation] */
+@keyframes ani {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(300px, 0);
+    }
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+.box_animation {
+    /* Default */
+    width: 100px;
+    height: 100px;
+    margin-top: 80px;
+    background: skyblue;
+    border: 1px solid blue;
+    color: white;
+
+    /* [animation] */
+
+    /* animation: ani 2s; */
+    /*
+      animation-name: ani;
+      animation-duration: 2s;
+      animation-timing-function: ease; (default)
+      animation-delay: 0s; (default)
+      animation-iteration-count: 1; (default)
+      animation-direction: normal; (default)
+      animation-fill-mode: none; (default)
+      animation-play-state: running; (default)
+    */
+
+    /* animation: ani 2s linear infinite; */
+
+    /* ani을 ease-in-out으로 1초동안 3번 실행 */
+    /* animation: ani 1s ease-in-out 3; */
+
+    /* alternate : 애니매이션의 방향(animation-direction)을 반대로 */
+    /* animation: ani 1s ease-in-out infinite alternate; */
+
+    /* alternate-reverse : alternate인데 출발을 100%부터 */
+    /* animation: ani 1s ease-in-out infinite alternate-reverse; */
+
+    /* forwards : 마지막을 100%로 그대로 두도록 */
+    animation: ani 1s ease-in-out forwards;
+}
